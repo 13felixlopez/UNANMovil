@@ -3,22 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using UNANMovil.Vistas;
 using Xamarin.Forms;
 
 namespace UNANMovil.VistaModelo
 {
-    public class VMMenuPrincipal:BaseViewModel
+    public class VMAsistencia:BaseViewModel
     {
         #region VARIABLES
         string identificacion;
         #endregion
         #region CONSTRUCTOR
-        public VMMenuPrincipal(INavigation navigation)
+        public VMAsistencia(INavigation navigation)
         {
             Navigation = navigation;
-            NavegarRegistrocomamd = new Command(async () => await NavegarRegistro());
-            NavegarAsistenciacomamd = new Command(async () => await NavegarAsistencia());
+            Volvercomamd = new Command(async () => await Volver());
         }
         #endregion
         #region OBJETOS 
@@ -30,18 +28,13 @@ namespace UNANMovil.VistaModelo
 
         #endregion
         #region PROCESOS
-        private async Task NavegarRegistro()
+        private async Task Volver()
         {
-            await Navigation.PushAsync(new Registro());
-        }
-        private async Task NavegarAsistencia()
-        {
-            await Navigation.PushAsync(new Asistencia());
+            await Navigation.PopAsync();
         }
         #endregion
         #region COMANDOS
-        public Command NavegarRegistrocomamd { get; }
-        public Command NavegarAsistenciacomamd { get; }
+        public Command Volvercomamd { get; }
         #endregion
     }
 }

@@ -25,7 +25,7 @@
             <!--Boton de agregar-->
             <Frame Grid.Column="2" HasShadow="False" BackgroundColor="Transparent">
                 <Button Grid.Column="2" BackgroundColor="Transparent"
-                    ImageSource="Add.png"/>
+                    ImageSource="Add.png" Command="{Binding NavegarAsistenciacomamd}"/>
             </Frame>
         </Grid>
         <!--Barra de Buscar por fecha-->
