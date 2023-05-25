@@ -7,7 +7,7 @@
              x:Class="UNANMovil.MainPage">
              <!--xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"!-->
 
-    <Grid RowDefinitions="80,*" BackgroundColor="#bababa">
+    <Grid RowDefinitions="80,55,*" BackgroundColor="#bababa">
         <!--Espacio para el titulo de pagina principal !-->
         <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
             <!--Espacio para logo-->
@@ -28,8 +28,15 @@
                     ImageSource="Add.png"/>
             </Frame>
         </Grid>
+        <!--Barra de Buscar por fecha-->
+        <Grid Grid.Row="1" ColumnDefinitions="320,*" BackgroundColor="WhiteSmoke">
+            <DatePicker VerticalOptions="Center" HorizontalOptions="End"
+                        Margin="0,0,20,0" FontAttributes="Bold" FontSize="30"/>
+            <ImageButton Grid.Column="1" Source="Buscar.png" HorizontalOptions="Start"
+                         BackgroundColor="Transparent"/>
+        </Grid>
         <!--Espacio de datos-->
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="2">
             <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
                 <StackLayout Margin="5,0,5,0" BackgroundColor="#FFFF80">
                     <Label Text="24/5/2023" HorizontalOptions="CenterAndExpand" FontSize="25"
