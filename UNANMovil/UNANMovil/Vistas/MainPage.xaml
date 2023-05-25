@@ -29,8 +29,8 @@
             </Frame>
         </Grid>
         <!--Barra de Buscar por fecha-->
-        <Grid Grid.Row="1" ColumnDefinitions="320,*" BackgroundColor="WhiteSmoke">
-            <DatePicker VerticalOptions="Center" HorizontalOptions="End"
+        <Grid Grid.Row="1" ColumnDefinitions="280,*" BackgroundColor="WhiteSmoke">
+            <DatePicker VerticalOptions="Center" HorizontalOptions="End" TextColor="Black"
                         Margin="0,0,20,0" FontAttributes="Bold" FontSize="30"/>
             <ImageButton Grid.Column="1" Source="Buscar.png" HorizontalOptions="Start"
                          BackgroundColor="Transparent"/>

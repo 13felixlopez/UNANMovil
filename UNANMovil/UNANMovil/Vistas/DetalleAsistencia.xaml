@@ -7,7 +7,7 @@
              x:Class="UNANMovil.Vistas.Registro">
     <ContentPage.Content>
         <!--Contenedor principal-->
-        <Grid RowDefinitions="80,125,*">
+        <Grid RowDefinitions="80,120,*">
              <!--Contenedor de la cabecera-->
              <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
                     <!--Espacio para logo-->
@@ -38,38 +38,38 @@
                     <Grid Grid.Column="1" ColumnDefinitions="*,*,*,*" Padding="10,0,10,0">
                         <Label Text="Hora de entrada: " TextColor="Green" FontSize="20" FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>
-                        <Label Text="00:00" Grid.Column="1" FontSize="35" HorizontalTextAlignment="Start"
-                               FontAttributes="Bold"/>
+                        <Label Text="00:00" Grid.Column="1" FontSize="34" HorizontalTextAlignment="Start"
+                               FontAttributes="Bold" TextColor="Gray"/>
                         <Label Grid.Column="2" Text="Hora de Salida: " TextColor="red" FontSize="20" FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>
-                    <Label Text="00:00" Grid.Column="3" FontSize="35" HorizontalTextAlignment="Start"
+                    <Label Text="00:00" Grid.Column="3" FontSize="34" HorizontalTextAlignment="Start" TextColor="Gray"
                                FontAttributes="Bold"/>
                 </Grid>
+                <BoxView BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
             </StackLayout>
                 <!--Contenedor de Detalles de los bloques-->
             <ScrollView Grid.Row="2">
                 <StackLayout BackgroundColor="WhiteSmoke">
-                <BoxView Grid.ColumnSpan="4" BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
                     <!--Detalles del bloque #1-->
                 <StackLayout>
                     <Label Text="Bloque #1" TextColor="Black" FontSize="30" FontAttributes="Bold"
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                     <!--Contenedor de la carrera-->
                     <Grid ColumnDefinitions="115,*" Margin="15,0,10,0">
-                        <Label Text="Carrera: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                        <Label Text="Carrera: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Text="Ing. Sistemas de la Informacion" Grid.Column="1" HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Año y Semestre-->
-                    <Grid ColumnDefinitions="100,70,*,*" Margin="15,0,10,0">
-                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                    <Grid ColumnDefinitions="80,50,140,50" Margin="15,0,10,0">
+                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
-                        <Label Text="5to" Grid.Column="1" HorizontalOptions="StartAndExpand"
+                        <Label Text="5to" Grid.Column="1" HorizontalOptions="Start" TextColor="Gray"
                                VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
-                        <Label Grid.Column="2" Text="Semestre: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                        <Label Grid.Column="2" Text="Semestre: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
-                        <Label Grid.Column="3" Text="1°" HorizontalOptions="StartAndExpand"
+                            <Label Grid.Column="3" Text="1°" HorizontalOptions="StartAndExpand" TextColor="Gray"
                                VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25"/>
                     </Grid>
                     <!--Contenedor de Asignatura-->
@@ -77,14 +77,14 @@
                         <Label Text="Asignatura: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black" Margin="15,0,0,0"/>
                         <Label Grid.Column="1" Text="Investigacion Aplicada" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Contenido-->
                     <Grid ColumnDefinitions="170,*">
                         <Label Text="Contenido: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                               Margin="15,0,0,0" FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Grid.Column="1" Text="Interfaces" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                         <BoxView BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
                     </StackLayout>
@@ -97,17 +97,17 @@
                         <Label Text="Carrera: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Text="Ing. Sistemas de la Informacion" Grid.Column="1" HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Año y Semestre-->
-                    <Grid ColumnDefinitions="100,70,*,*" Margin="15,0,10,0">
-                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                        <Grid ColumnDefinitions="80,50,140,50" Margin="15,0,10,0">
+                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
-                        <Label Text="3ro" Grid.Column="1" HorizontalOptions="StartAndExpand"
+                            <Label Text="3ro" Grid.Column="1" HorizontalOptions="StartAndExpand" TextColor="Gray"
                                VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
                         <Label Grid.Column="2" Text="Semestre: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
-                        <Label Grid.Column="3" Text="1°" HorizontalOptions="StartAndExpand"
+                            <Label Grid.Column="3" Text="1°" HorizontalOptions="StartAndExpand" TextColor="Gray"
                                VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25"/>
                     </Grid>
                     <!--Contenedor de Asignatura-->
@@ -115,14 +115,14 @@
                         <Label Text="Asignatura: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black" Margin="15,0,0,0"/>
                         <Label Grid.Column="1" Text="Programacion Algoritmica " HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Contenido-->
                     <Grid ColumnDefinitions="170,*">
                         <Label Text="Contenido: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                               Margin="15,0,0,0" FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Grid.Column="1" Text="Arreglos Unidimensionales" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                         <BoxView BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
                     </StackLayout>
@@ -135,32 +135,32 @@
                         <Label Text="Carrera: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Text="Ing. AgroIndustrial" Grid.Column="1" HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Año y Semestre-->
-                    <Grid ColumnDefinitions="100,70,*,*" Margin="15,0,10,0">
-                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                        <Grid ColumnDefinitions="80,50,140,50" Margin="15,0,10,0">
+                        <Label Text="Año: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Text="1ro" Grid.Column="1" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                         <Label Grid.Column="2" Text="Semestre: " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Grid.Column="3" Text="1°" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Asignatura-->
                     <Grid ColumnDefinitions="180,*">
                         <Label Text="Asignatura: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                                FontAttributes="Bold" FontSize="25" TextColor="Black" Margin="15,0,0,0"/>
                         <Label Grid.Column="1" Text="Informatica Basica" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                     <!--Contenedor de Contenido-->
                     <Grid ColumnDefinitions="170,*">
                         <Label Text="Contenido: " VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
                               Margin="15,0,0,0" FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                         <Label Grid.Column="1" Text="Primeros pasos en Excel" HorizontalOptions="StartAndExpand"
-                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                               VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Gray"/>
                     </Grid>
                         <BoxView BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
                     </StackLayout>
