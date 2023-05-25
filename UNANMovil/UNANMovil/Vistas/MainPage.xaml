@@ -16,6 +16,7 @@
                 <Frame Grid.Row="1" BackgroundColor="Yellow"></Frame>
                 <Frame Grid.Row="2" BackgroundColor="Blue"></Frame>
             </Grid>
+            <Image Source="Unan1.png" Aspect="AspectFill"/>
             <!--Espacio para titulo de la app-->
             <Frame Grid.Column="1" BackgroundColor="Transparent">
                 <Label Text="Control de Asistencia" HorizontalOptions="CenterAndExpand" 
