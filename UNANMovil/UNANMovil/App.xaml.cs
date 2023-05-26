@@ -1,4 +1,5 @@
 ﻿using System;
+using UNANMovil.Vistas;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace UNANMovil
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()
