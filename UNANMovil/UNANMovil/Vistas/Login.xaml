@@ -5,11 +5,11 @@
              x:Class="UNANMovil.Vistas.Login">
     <ContentPage.Content>
         <!--Contenedor de las divisiones de la pantalla-->
-        <Grid RowDefinitions="100,*,50,*">
+        <Grid RowDefinitions="160,*,240,100">
             <!--Contenedor del titulo-->
-            <Frame BorderColor="Black" BackgroundColor="DarkBlue" Margin="0,-25,0,0">
+            <Frame BackgroundColor="#042758" Margin="-5,-25,0,0">
                 <!--Nombre de la Universidad-->
-                <Label Grid.Row="1" Text="UNAN-FAREM Matagalpa" Margin="10" TextColor="White" FontSize="30"
+                <Label Grid.Row="1" Text="UNAN-FAREM Matagalpa" Margin="10" TextColor="White" FontSize="40"
                            HorizontalTextAlignment="Center"/>
             </Frame>
             <!--Contenedor del formulario de inicio de sesion-->
@@ -38,9 +38,25 @@
                     </Grid>
                 </Grid>
             </Frame>
-            <Button Grid.Row="2" Text="Iniciar Sesion" BackgroundColor="#1976D2" TextColor="White" FontSize="20"
-                    FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                    Margin="20"/>
+            <!--Boton para iniciar sesion-->
+            <Frame Grid.Row="2" Margin="0,0,0,120">
+                <Button Grid.Row="2" Text="Iniciar Sesion" BackgroundColor="#1976D2" TextColor="White" FontSize="20"
+                    FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="StartAndExpand"
+                   CornerRadius="25" Margin="0,40,0,0" Padding="30,0,30,0"/>
+            </Frame>
+            <!--Apartado de restablecer contraseña-->
+            <Frame Grid.Row="3" Margin="0,-130,0,0">
+                <Grid RowDefinitions="*,*,*">
+                    <!--Texto de has olvidado tu contraseña-->
+                    <Label Text="Has olvidado tú contraseña" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
+                           HorizontalTextAlignment="Center"/>
+                    <!--Boton de restablecer contraseña-->
+                    <Button Grid.Row="1" Text="Restablecer" BackgroundColor="Transparent" FontSize="20" BorderColor="Gray"
+                            VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" 
+                            Margin="0,-40" Padding="0,10,0,20" TextColor="Blue"/>
+                    <Frame Grid.Row="2" BackgroundColor="#042758" Margin="-20"></Frame>
+                </Grid>
+            </Frame>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
