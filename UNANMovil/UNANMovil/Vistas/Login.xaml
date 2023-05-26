@@ -10,7 +10,7 @@
             <Frame BackgroundColor="#042758" Margin="-5,-25,0,0">
                 <!--Nombre de la Universidad-->
                 <Label Grid.Row="1" Text="UNAN-FAREM Matagalpa" Margin="10" TextColor="White" FontSize="40"
-                           HorizontalTextAlignment="Center"/>
+                           HorizontalTextAlignment="Center" FontAttributes="Bold"/>
             </Frame>
             <!--Contenedor del formulario de inicio de sesion-->
             <Frame Grid.Row="1" Margin="20,-40,20,0" BackgroundColor="White" CornerRadius="25">
@@ -46,14 +46,10 @@
             </Frame>
             <!--Apartado de restablecer contraseña-->
             <Frame Grid.Row="3" Margin="0,-130,0,0">
-                <Grid RowDefinitions="*,*,*">
-                    <!--Texto de has olvidado tu contraseña-->
-                    <Label Text="Has olvidado tú contraseña" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
+                <Grid RowDefinitions="*,*">
+                    <!--Lema-->
+                    <Label Text="A la libertad por la Universidad" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
                            HorizontalTextAlignment="Center"/>
-                    <!--Boton de restablecer contraseña-->
-                    <Button Grid.Row="1" Text="Restablecer" BackgroundColor="Transparent" FontSize="20" BorderColor="Gray"
-                            VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" 
-                            Margin="0,-40" Padding="0,10,0,20" TextColor="Blue"/>
                     <Frame Grid.Row="2" BackgroundColor="#042758" Margin="-20"></Frame>
                 </Grid>
             </Frame>
