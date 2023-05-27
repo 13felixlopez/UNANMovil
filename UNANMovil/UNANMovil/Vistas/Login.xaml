@@ -25,7 +25,7 @@
                                VerticalOptions="CenterAndExpand"/>
                         <!--Entrada de para user-->
                         <Entry Grid.Column="1" Placeholder="Nombre de Usuario" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"
-                               HorizontalTextAlignment="Start" Margin="20,0,0,0"/>
+                               HorizontalTextAlignment="Start" Margin="20,0,0,0" Text="{Binding Nombre}"/>
                     </Grid>
                     <!--Insertar contraseña-->
                     <Grid Grid.Row="2" ColumnDefinitions="50,*" VerticalOptions="Center">
@@ -34,7 +34,7 @@
                                VerticalOptions="CenterAndExpand"/>
                         <!--Entrada de para Pass-->
                         <Entry Grid.Column="1" Placeholder="Contraseña" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"
-                               HorizontalTextAlignment="Start" Margin="20,0,0,0" IsPassword="True"/>
+                               HorizontalTextAlignment="Start" Margin="20,0,0,0" IsPassword="True" Text="{Binding Pass}"/>
                     </Grid>
                 </Grid>
             </Frame>
@@ -42,13 +42,13 @@
             <Frame Grid.Row="2" Margin="0,0,0,120">
                 <Button Grid.Row="2" Text="Iniciar Sesion" BackgroundColor="#1976D2" TextColor="White" FontSize="20"
                     FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="StartAndExpand"
-                   CornerRadius="25" Margin="0,40,0,0" Padding="30,0,30,0"/>
+                   CornerRadius="25" Margin="0,40,0,0" Padding="30,0,30,0" Command="{Binding Logincomamd}"/>
             </Frame>
-            <!--Apartado de restablecer contraseña-->
+            <!--Apartado de Lema-->
             <Frame Grid.Row="3" Margin="0,-130,0,0">
                 <Grid RowDefinitions="*,*">
                     <!--Lema-->
-                    <Label Text="A la libertad por la Universidad" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
+                    <Label Text="¡A la libertad por la Universidad!" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
                            HorizontalTextAlignment="Center"/>
                     <Frame Grid.Row="2" BackgroundColor="#042758" Margin="-20"></Frame>
                 </Grid>

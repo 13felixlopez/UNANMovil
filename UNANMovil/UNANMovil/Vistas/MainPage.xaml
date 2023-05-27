@@ -38,7 +38,7 @@
         <!--Espacio de datos-->
         <ScrollView Grid.Row="2">
             <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
-                <StackLayout Margin="5,0,5,0" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="CenterAndExpand" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -51,7 +51,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="1" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="1" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -64,7 +64,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="2" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="2" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -77,7 +77,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="3" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="3" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -90,7 +90,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="4" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="4" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -103,7 +103,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="5" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="5" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -116,7 +116,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="6" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="6" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -129,7 +129,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="7" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="7" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -142,7 +142,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="8" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="8" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
@@ -155,7 +155,7 @@
                         <TapGestureRecognizer Command="{Binding NavegarRegistrocomamd}"/>
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
-                <StackLayout Margin="5,0,5,0" Grid.Row="9" BackgroundColor="#FFFF80">
+                <StackLayout Margin="5,0,5,0" Grid.Row="9" BackgroundColor="White">
                     <Label Text="24/5/2023" HorizontalOptions="Center" FontSize="25"
                        TextColor="Black"/>
                     <Grid ColumnDefinitions="*,*">
