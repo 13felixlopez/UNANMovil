@@ -35,17 +35,16 @@
                     <Label Text="Fecha" VerticalOptions="Fill" HorizontalOptions="CenterAndExpand"
                            FontAttributes="Bold" FontSize="25" TextColor="Black"/>
                     <!--Contenedor de Horas laboradas-->
-                    <Grid Grid.Column="1" ColumnDefinitions="*,*,*,*" Padding="10,0,10,0">
-                        <Label Text="Hora de entrada: " TextColor="Green" FontSize="20" FontAttributes="Bold"
+                <Grid Grid.Column="1" ColumnDefinitions="*,*,*,*" Padding="10,0,10,0">
+                    <Label Text="Hora de entrada: " TextColor="Green" FontSize="20" FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>
-                        <Label Text="00:00" Grid.Column="1" FontSize="34" HorizontalTextAlignment="Start"
+                    <Label Text="00:00" Grid.Column="1" FontSize="34" HorizontalTextAlignment="Start"
                                FontAttributes="Bold" TextColor="#301C1C"/>
-                        <Label Grid.Column="2" Text="Hora de Salida: " TextColor="red" FontSize="20" FontAttributes="Bold"
+                    <Label Grid.Column="2" Text="Hora de Salida: " TextColor="red" FontSize="20" FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>
                     <Label Text="00:00" Grid.Column="3" FontSize="34" HorizontalTextAlignment="Start" TextColor="#301C1C"
                                FontAttributes="Bold"/>
                 </Grid>
-                <BoxView BackgroundColor="Black" HeightRequest="2" WidthRequest="500"/>
             </StackLayout>
                 <!--Contenedor de Detalles de los bloques-->
             <ScrollView Grid.Row="2">

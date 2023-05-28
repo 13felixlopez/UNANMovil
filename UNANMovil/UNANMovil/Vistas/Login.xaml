@@ -5,7 +5,7 @@
              x:Class="UNANMovil.Vistas.Login">
     <ContentPage.Content>
         <!--Contenedor de las divisiones de la pantalla-->
-        <Grid RowDefinitions="160,*,240,100">
+        <Grid RowDefinitions="160,*,240,100" BackgroundColor="White">
             <!--Contenedor del titulo-->
             <Frame BackgroundColor="#042758" Margin="-5,-25,0,0">
                 <!--Nombre de la Universidad-->
@@ -25,7 +25,8 @@
                                VerticalOptions="CenterAndExpand"/>
                         <!--Entrada de para user-->
                         <Entry Grid.Column="1" Placeholder="Nombre de Usuario" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"
-                               HorizontalTextAlignment="Start" Margin="20,0,0,0" Text="{Binding Nombre}"/>
+                               HorizontalTextAlignment="Start" Margin="20,0,-100,0" Text="{Binding Nombre}" 
+                               PlaceholderColor="Gray" x:Name="txtUser" TextColor="Black"/>
                     </Grid>
                     <!--Insertar contraseña-->
                     <Grid Grid.Row="2" ColumnDefinitions="50,*" VerticalOptions="Center">
@@ -33,8 +34,9 @@
                         <Image Source="pass.png" HorizontalOptions="EndAndExpand" 
                                VerticalOptions="CenterAndExpand"/>
                         <!--Entrada de para Pass-->
-                        <Entry Grid.Column="1" Placeholder="Contraseña" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"
-                               HorizontalTextAlignment="Start" Margin="20,0,0,0" IsPassword="True" Text="{Binding Pass}"/>
+                            <Entry Grid.Column="1" Placeholder="Contraseña" PlaceholderColor="Gray" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"
+                               HorizontalTextAlignment="Start" Margin="20,0,0,0" IsPassword="True" Text="{Binding Pass}" x:Name="txtPass"
+                               TextColor="Black"/>
                     </Grid>
                 </Grid>
             </Frame>

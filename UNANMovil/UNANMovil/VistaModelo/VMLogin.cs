@@ -38,21 +38,28 @@ namespace UNANMovil.VistaModelo
         #region PROCESOS
         private async Task Login()
         {
-            if (i < cant)
+            if (string.IsNullOrEmpty(Nombre)&&string.IsNullOrEmpty(Pass))
             {
-                if (nombre == "Felix" && pass == "1316")
+                await DisplayAlert("Vacio", "LLene los campos por favor", "OK");
+            }
+            else
+            {
+                if (i < cant)
                 {
-                    await Navigation.PushAsync(new MainPage());
-                }
-                i++;
-                if (i == 3)
-                {
-                    await DisplayAlert("ERROR", "Ya excedio los intentos permitidos", "OK");
-                    Process.GetCurrentProcess().Kill();
-                }
-                else if (nombre != "Felix" && pass != "1316")
-                {
-                    await DisplayAlert("Datos Erroneos", "Los datos ingresados son incorrectos", "OK");
+                    if (nombre == "Felix" && pass == "1316")
+                    {
+                        await Navigation.PushAsync(new MainPage());
+                    }
+                    i++;
+                    if (i == 3)
+                    {
+                        await DisplayAlert("ERROR", "Ya excedio los intentos permitidos", "OK");
+                        Process.GetCurrentProcess().Kill();
+                    }
+                    else if (nombre != "Felix" || pass != "1316")
+                    {
+                        await DisplayAlert("Datos Erroneos", "Los datos ingresados son incorrectos", "OK");
+                    }
                 }
             }
         }
