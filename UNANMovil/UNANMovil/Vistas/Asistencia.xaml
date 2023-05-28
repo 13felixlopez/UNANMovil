@@ -50,7 +50,7 @@
                                FontSize="20" HorizontalTextAlignment="Center" Margin="0,0,10,0"/>
                             <Button Text="Aceptar" Grid.Column="2" FontSize="20" TextColor="Black"
                                 BackgroundColor="#FFFF80" FontAttributes="Bold" BorderColor="Gray"
-                                BorderWidth="2"/>
+                                BorderWidth="2" CornerRadius="25"/>
                         </Grid>
                     </StackLayout>
                     <!--Contenedor de los datos de los bloques a impartir-->
@@ -102,7 +102,7 @@
                             </Grid>
                             <!--Boton de agregar los datos del bloque-->
                             <Button Grid.Row="5" Text="Agregar Bloque" TextColor="Black" BackgroundColor="Coral" FontSize="20"
-                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="20"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="25"
                                 FontAttributes="Bold"/>
                         </Grid>
                     </Frame>
