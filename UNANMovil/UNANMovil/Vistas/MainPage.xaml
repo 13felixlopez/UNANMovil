@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:vistamodelo="clr-namespace:UNANMovil.VistaModelo" 
              x:DataType="vistamodelo:VMMenuPrincipal"
+             xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False"
              x:Class="UNANMovil.MainPage">
-             <!--xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"!-->
 
     <Grid RowDefinitions="80,55,*" BackgroundColor="#bababa">
         <!--Espacio para el titulo de pagina principal !-->
@@ -29,9 +29,10 @@
             </Frame>
         </Grid>
         <!--Barra de Buscar por fecha-->
-        <Grid Grid.Row="1" ColumnDefinitions="260,*" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid Grid.Row="1" ColumnDefinitions="260,*" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand" 
+              VerticalOptions="FillAndExpand" HeightRequest="100" WidthRequest="200">
             <DatePicker VerticalOptions="Center" HorizontalOptions="End" TextColor="Black"
-                        Margin="0,0,20,0" FontAttributes="Bold" FontSize="Large"/>
+                        Margin="0,0,0,0" FontAttributes="Bold" FontSize="Large" HeightRequest="150" WidthRequest="160"/>
             <ImageButton Grid.Column="1" Source="Buscar.png" HorizontalOptions="Start"
                          BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50"/>
         </Grid>
