@@ -7,7 +7,7 @@
              x:Class="UNANMovil.Vistas.Registro">
     <ContentPage.Content>
         <!--Contenedor principal-->
-        <Grid RowDefinitions="80,120,*">
+        <Grid RowDefinitions="80,120,*" BackgroundColor="Black">
              <!--Contenedor de la cabecera-->
              <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
                     <!--Espacio para logo-->

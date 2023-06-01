@@ -4,7 +4,7 @@
              NavigationPage.HasNavigationBar="False"
              x:Class="UNANMovil.Vistas.Asistencia">
     <ContentPage.Content >
-        <Grid RowDefinitions="80,55,*" BackgroundColor="Gray" ColumnSpacing="0" RowSpacing="0">
+        <Grid RowDefinitions="80,55,*" BackgroundColor="Gray"  >
             <!--Espacio para el titulo de pagina !-->
             <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
                 <!--Espacio para logo-->
@@ -26,29 +26,28 @@
                 </Frame>
             </Grid>
             <!--Contenedor de Fecha-->
-            <Frame HasShadow="False" Grid.Row="1" Margin="-4" BackgroundColor="White">
+            <Frame HasShadow="False" Grid.Row="1" Margin="5,-5,5,0" BackgroundColor="White">
                 <Label Text="25/5/2023" TextColor="Black" FontSize="25" FontAttributes="Bold"
                        HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="-10"/>
             </Frame>
-            <ScrollView Grid.Row="2">
+            <ScrollView Grid.Row="2" Margin="5,0,5,0">
                 <!--Contenedor de Formulario-->
                 <Grid RowDefinitions="150,340,*">
                     <!--Contenedor de Hora y Bloque a impartir-->
                     <StackLayout BackgroundColor="White">
                         <!--Contenedor de Hora de entrada-->
-                        <Grid ColumnDefinitions="*,*">
+                        <Grid ColumnDefinitions="230,140">
                             <Label Text="Hora de entrada: " TextColor="Black" HorizontalOptions="EndAndExpand"
-                               VerticalOptions="Center" FontAttributes="Bold" FontSize="25" HeightRequest="30" WidthRequest="184"/>
+                               VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
                             <TimePicker Grid.Column="1" FontSize="23" TextColor="Green" HorizontalOptions="StartAndExpand"
-                                    VerticalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="109"/>
+                                    VerticalOptions="CenterAndExpand"/>
                         </Grid>
                         <!--Bloques a impartir-->
-                        <Grid ColumnDefinitions="130,auto,auto">
+                        <Grid ColumnDefinitions="130,80,140">
                             <Label Text="Bloques a impartir:" TextColor="Black" 
-                               FontAttributes="Bold" Margin="8,0,0,0" FontSize="23" VerticalOptions="CenterAndExpand"
-                                   HeightRequest="60" WidthRequest="102"/>
-                            <Entry Grid.Column="1" Keyboard="Numeric" TextColor="Black" FontAttributes="Bold"
-                               FontSize="20" HorizontalTextAlignment="Center" HeightRequest="40" WidthRequest="100"/>
+                               FontAttributes="Bold" Margin="15,0,0,0" FontSize="23" VerticalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Keyboard="Numeric" TextColor="Black" FontAttributes="Bold" Placeholder="#"
+                               FontSize="20" HorizontalTextAlignment="Center" PlaceholderColor="Gray"/>
                             <Button Text="Aceptar" Grid.Column="2" FontSize="20" TextColor="Black"
                                 BackgroundColor="#FFFF80" FontAttributes="Bold" BorderColor="Gray"
                                 BorderWidth="2" CornerRadius="25" Margin="10"/>
@@ -57,60 +56,63 @@
                     <!--Contenedor de los datos de los bloques a impartir-->
                     <StackLayout Grid.Row="1" >
                         <!--Contenedor del formulario a llenar-->
-                        <Grid RowDefinitions="50,50,50,50,50,60" BackgroundColor="White" HeightRequest="340" WidthRequest="110">
+                        <Grid RowDefinitions="50,50,50,50,50,60" BackgroundColor="White">
                             <!--Contenedor del indicador del bloque y año-->
                             <Grid ColumnDefinitions="120,20,*" HorizontalOptions="FillAndExpand">
-                                <Label Text="Bloque: #" TextColor="Black" FontSize="20" HeightRequest="30" WidthRequest="90"
+                                <Label Text="Bloque: #" TextColor="Black" FontSize="20"
                                HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
                                 <Label Grid.Column="1" Text="1" TextColor="Black" FontSize="Body" HorizontalOptions="Start" VerticalOptions="Center"
-                               FontAttributes="Bold" HeightRequest="20" WidthRequest="10"/>
+                               FontAttributes="Bold" />
                                 <!--Contenedor del año-->
                                 <Grid Grid.Column="2" ColumnDefinitions="*,*">
                                     <Label Text="Año:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" HeightRequest="30" WidthRequest="50"/>
+                                   HorizontalOptions="End" FontAttributes="Bold"/>
                                     <Picker Grid.Column="1" TextColor="Black" Title="Año" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" HeightRequest="40" WidthRequest="100" Margin="0,0,10,0"/>
+                                    HorizontalTextAlignment="Center" Margin="0,0,10,0"/>
                                 </Grid>
                             </Grid>
                             <!--Contenedor de carrera-->
-                            <Grid Grid.Row="1" ColumnDefinitions="*,300">
+                            <Grid Grid.Row="1" ColumnDefinitions="90,350">
                                 <Label Text="Carrera:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" HeightRequest="30" WidthRequest="74"/>
+                                   HorizontalOptions="End" FontAttributes="Bold" />
                                 <Picker Grid.Column="1" TextColor="Black" Title="Carreras" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" Margin="0,0,10,0" />
+                                    HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold"
+                                        FontSize="20"/>
                             </Grid>
                             <!--Contenedor de Asignatura-->
-                            <Grid Grid.Row="2" ColumnDefinitions="*,260" Margin="0,-5,0,0" >
+                            <Grid Grid.Row="2" ColumnDefinitions="120,310" >
                                 <Label Text="Asignatura:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" Margin="10,0,0,0" HeightRequest="30"
-                                       WidthRequest="110"/>
+                                   HorizontalOptions="End" FontAttributes="Bold"/>
                                 <Picker Grid.Column="1" TextColor="Black" Title="Asignatura" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" HeightRequest="40" WidthRequest="110" Margin="0,0,10,0"/>
+                                    HorizontalTextAlignment="Center"
+                                        TitleColor="Gray" FontAttributes="Bold" FontSize="20"/>
                             </Grid>
 
                             <!--Contenedor de Contenido a impartir-->
-                            <Grid Grid.Row="3" ColumnDefinitions="*,270" Margin="0,-5,0,0">
+                            <Grid Grid.Row="3" ColumnDefinitions="110,320">
                                 <Label Text="Contenido:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" HeightRequest="30" WidthRequest="100"/>
+                                   HorizontalOptions="End" FontAttributes="Bold"/>
                                 <Picker Grid.Column="1" TextColor="Black" Title="Contenidos" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" HeightRequest="40" WidthRequest="100" Margin="0,0,10,0"/>
+                                    HorizontalTextAlignment="Center"
+                                        TitleColor="gray" FontAttributes="Bold" FontSize="20"/>
                             </Grid>
                             <!--Contenedor de actividad-->
-                            <Grid Grid.Row="4" ColumnDefinitions="*,280">
+                            <Grid Grid.Row="4" ColumnDefinitions="110,330">
                                 <Label Text="Actividad:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" HeightRequest="30" WidthRequest="91"/>
-                                <Picker Grid.Column="1" TextColor="Black" Title="Actividad" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" HeightRequest="40" WidthRequest="100" Margin="0,0,10,0"/>
+                                   Margin="10,0,0,0" FontAttributes="Bold"/>
+                                <Picker Grid.Column="1" TextColor="Black" Title="Actividad"
+                                    HorizontalTextAlignment="Center"
+                                        TitleColor="Gray" FontAttributes="Bold" FontSize="20"/>
                             </Grid>
                             <!--Boton de agregar los datos del bloque-->
                             <Button Grid.Row="5" Text="Agregar Bloque" TextColor="Black" BackgroundColor="Coral" FontSize="20"
                                 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="25"
-                                FontAttributes="Bold" Margin="0,0,0,10" HeightRequest="60" WidthRequest="200"/>
+                                FontAttributes="Bold" Margin="0,0,0,10" BorderColor="Gray" BorderWidth="2"/>
                         </Grid>
                     </StackLayout>
                     <!--Contenedor de datos de salida-->
                     <StackLayout Grid.Row="2" BackgroundColor="White">
-                        <Grid RowDefinitions="60,*">
+                        <Grid RowDefinitions="60,200">
                             <!--Contenedor de Hora de Salida-->
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Hora de Salida: " TextColor="Black" HorizontalOptions="EndAndExpand"
@@ -120,30 +122,28 @@
                             </Grid>
                             <!--Contenedor de Progreso del tema-->
                             <!--Contenedor de datos de progreso-->
-                            <StackLayout Grid.Row="1" Padding="0" HeightRequest="255" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="*,*">
+                            <StackLayout Grid.Row="1" BackgroundColor="Transparent">
+                                <Grid ColumnDefinitions="180,180">
                                     <Label Text="Progreso del tema:" TextColor="Black" FontSize="20"
                                        VerticalOptions="CenterAndExpand" HorizontalOptions="End" FontAttributes="Bold"/>
                                     <Picker Grid.Column="1" Title="Progreso" FontAttributes="Bold" FontSize="20"
-                                        HorizontalTextAlignment="Center" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" BackgroundColor="White"/>
+                                            TitleColor="Gray" HorizontalTextAlignment="Center"/>
                                 </Grid>
                                 <!--Contenedor de Observaciones-->
-                                <Grid ColumnDefinitions="*,225">
+                                <Grid ColumnDefinitions="160,200">
                                     <Label Text="Observaciones:" TextColor="Black" FontSize="20"
-                                       VerticalOptions="CenterAndExpand" HorizontalOptions="End" FontAttributes="Bold"/>
-                                    <Editor Grid.Column="1" TextColor="Black" FontSize="20" VerticalOptions="CenterAndExpand"
-                                           Placeholder="Inserte sus Observaciones" HeightRequest="100" Margin="0,0,10,0"/>
+                                       VerticalOptions="CenterAndExpand" Margin="10,0,0,0" FontAttributes="Bold"/>
+                                    <Editor Grid.Column="1" TextColor="Black" FontSize="20"
+                                           Placeholder="Inserte sus Observaciones" PlaceholderColor="Gray"/>
                                 </Grid>
                                 <Button Text="Guardar" TextColor="Black" BackgroundColor="#0C7EF0" FontSize="20" 
                                  FontAttributes="Bold" BorderColor="Gray" BorderWidth="2" CornerRadius="25" 
-                                        HeightRequest="50" WidthRequest="140" HorizontalOptions="CenterAndExpand"/>
+                                        HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"/>
                             </StackLayout>
                         </Grid>
                     </StackLayout>
-
                 </Grid>
             </ScrollView>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
