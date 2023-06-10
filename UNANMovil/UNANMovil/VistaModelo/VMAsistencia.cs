@@ -1,9 +1,12 @@
 ﻿using Android.Content.Res;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using UNANMovil.Conexion;
 
 namespace UNANMovil.VistaModelo
 {
@@ -31,6 +34,17 @@ namespace UNANMovil.VistaModelo
         private async Task Volver()
         {
             await Navigation.PopAsync();
+        }
+
+        public void MostrarModalidades(Picker combo)
+        {
+            Conexion.Conexion.Abrir();
+            SqlCommand da = new SqlCommand("MostrarModalidad", Conexion.Conexion.conectar);
+            da.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter cb = new SqlDataAdapter(da);
+            DataTable dt = new DataTable();
+            cb.Fill(dt);
+            combo.ItemsSource= (System.Collections.IList)dt;
         }
         #endregion
         #region COMANDOS
