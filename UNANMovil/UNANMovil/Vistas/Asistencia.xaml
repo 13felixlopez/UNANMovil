@@ -4,141 +4,156 @@
              NavigationPage.HasNavigationBar="False"
              x:Class="UNANMovil.Vistas.Asistencia">
     <ContentPage.Content >
-        <Grid RowDefinitions="80,55,*" BackgroundColor="Gray"  >
-            <!--Espacio para el titulo de pagina !-->
-            <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
-                <!--Espacio para logo-->
-                <Grid RowDefinitions="*,*,*" Margin="10" ColumnSpacing="0" RowSpacing="0">
-                    <Frame BackgroundColor="red"></Frame>
-                    <Frame Grid.Row="1" BackgroundColor="Yellow"></Frame>
-                    <Frame Grid.Row="2" BackgroundColor="Blue"></Frame>
+        <Grid RowDefinitions="Auto,Auto,*" BackgroundColor="Gray">
+            <Grid RowDefinitions="80,55,*" BackgroundColor="Gray">
+                <!-- Espacio para el título de la página -->
+                <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
+                    <!-- Espacio para el logo -->
+                    <Grid RowDefinitions="*,*,*" Margin="10" ColumnSpacing="0" RowSpacing="0">
+                        <Frame BackgroundColor="Red" CornerRadius="10" />
+                        <Frame Grid.Row="1" BackgroundColor="Yellow" CornerRadius="10" />
+                        <Frame Grid.Row="2" BackgroundColor="Blue" CornerRadius="10" />
+                    </Grid>
+                    <Image Source="Unan1.png" Aspect="AspectFit" Margin="10" />
+                    <!-- Espacio para el título de la app -->
+                    <Frame Grid.Column="1" BackgroundColor="Transparent">
+                        <Label Text="Nueva Asistencia" HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" />
+                    </Frame>
+                    <!-- Boton de Volver -->
+                    <Frame Grid.Column="2" HasShadow="False" BackgroundColor="Transparent">
+                        <Button Grid.Column="2" BackgroundColor="Transparent"
+                ImageSource="flecha_left2.png" Command="{Binding Volvercomamd}" />
+                    </Frame>
                 </Grid>
-                <Image Source="Unan1.png" Aspect="AspectFit" Margin="10"/>
-                <!--Espacio para titulo de la app-->
-                <Frame Grid.Column="1" BackgroundColor="Transparent">
-                    <Label Text="Nueva Asistencia" HorizontalOptions="CenterAndExpand" 
-                       VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke"/>
-                </Frame>
-                <!--Boton de Volver-->
-                <Frame Grid.Column="2" HasShadow="False" BackgroundColor="Transparent">
-                    <Button Grid.Column="2" BackgroundColor="Transparent"
-                    ImageSource="flecha_left2.png" Command="{Binding Volvercomamd}"/>
+                <!-- Contenedor de Fecha -->
+                <Frame HasShadow="False" Grid.Row="1" Margin="5,-5,5,0" BackgroundColor="White">
+                    <Label Text="25/5/2023" TextColor="Black" FontSize="25" FontAttributes="Bold"
+            HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="-10" />
                 </Frame>
             </Grid>
-            <!--Contenedor de Fecha-->
-            <Frame HasShadow="False" Grid.Row="1" Margin="5,-5,5,0" BackgroundColor="White">
-                <Label Text="25/5/2023" TextColor="Black" FontSize="25" FontAttributes="Bold"
-                       HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="-10"/>
-            </Frame>
-            <ScrollView Grid.Row="2" Margin="5,0,5,0">
-                <!--Contenedor de Formulario-->
-                <Grid RowDefinitions="150,340,*">
-                    <!--Contenedor de Hora y Bloque a impartir-->
-                    <StackLayout BackgroundColor="White">
-                        <!--Contenedor de Hora de entrada-->
-                        <Grid ColumnDefinitions="230,140">
+
+
+            <ScrollView Grid.Row="2" Margin="5,-10,5,0">
+                <!-- Contenedor de Formulario -->
+                <Grid RowDefinitions="Auto,Auto,*">
+                    <!-- Contenedor de Hora y Bloque a impartir -->
+                    <StackLayout BackgroundColor="White" Padding="10">
+                        <!-- Contenedor de Hora de entrada -->
+                        <Grid ColumnDefinitions="Auto,Auto">
                             <Label Text="Hora de entrada: " TextColor="Black" HorizontalOptions="EndAndExpand"
-                               VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+                    VerticalOptions="Center" FontAttributes="Bold" FontSize="25" />
                             <TimePicker Grid.Column="1" FontSize="23" TextColor="Green" HorizontalOptions="StartAndExpand"
-                                    VerticalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" />
                         </Grid>
-                        <!--Bloques a impartir-->
-                        <Grid ColumnDefinitions="130,80,140">
-                            <Label Text="Bloques a impartir:" TextColor="Black" 
-                               FontAttributes="Bold" Margin="15,0,0,0" FontSize="23" VerticalOptions="CenterAndExpand"/>
+                        <!-- Bloques a impartir -->
+                        <Grid ColumnDefinitions="Auto,Auto,Auto">
+                            <Label Text="Bloques a impartir:" TextColor="Black"
+                    FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" />
                             <Entry Grid.Column="1" Keyboard="Numeric" TextColor="Black" FontAttributes="Bold" Placeholder="#"
-                               FontSize="20" HorizontalTextAlignment="Center" PlaceholderColor="Gray"/>
+                    FontSize="20" HorizontalTextAlignment="Center" PlaceholderColor="Gray" Margin="5"/>
                             <Button Text="Aceptar" Grid.Column="2" FontSize="20" TextColor="Black"
-                                BackgroundColor="#FFFF80" FontAttributes="Bold" BorderColor="Gray"
-                                BorderWidth="2" CornerRadius="25" Margin="10"/>
+                    BackgroundColor="#FFFF80" FontAttributes="Bold" BorderColor="Gray"
+                    BorderWidth="2" CornerRadius="25" Margin="10" />
                         </Grid>
                     </StackLayout>
-                    <!--Contenedor de los datos de los bloques a impartir-->
-                    <StackLayout Grid.Row="1" >
-                        <!--Contenedor del formulario a llenar-->
-                        <Grid RowDefinitions="50,50,50,50,50,60" BackgroundColor="White">
-                            <!--Contenedor del indicador del bloque y año-->
-                            <Grid ColumnDefinitions="120,20,*" HorizontalOptions="FillAndExpand">
+
+
+                    <StackLayout Grid.Row="1">
+                        <!-- Contenedor del formulario a llenar -->
+                        <Grid BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Contenedor del indicador del bloque y año -->
+                            <Grid ColumnDefinitions="Auto,Auto,*">
                                 <Label Text="Bloque: #" TextColor="Black" FontSize="20"
-                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
-                                <Label Grid.Column="1" Text="1" TextColor="Black" FontSize="Body" HorizontalOptions="Start" VerticalOptions="Center"
-                               FontAttributes="Bold" />
-                                <!--Contenedor del año-->
+                HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="1" TextColor="Black" FontSize="Body"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand" FontAttributes="Bold" />
+
                                 <Grid Grid.Column="2" ColumnDefinitions="*,*">
                                     <Label Text="Año:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold"/>
+                    HorizontalOptions="End" FontAttributes="Bold" />
                                     <Picker Grid.Column="1" TextColor="Black" Title="Año" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" Margin="0,0,10,0"/>
+                    HorizontalTextAlignment="Center" Margin="0,0,10,0" />
                                 </Grid>
                             </Grid>
-                            <!--Contenedor de carrera-->
-                            <Grid Grid.Row="1" ColumnDefinitions="90,350">
+
+                            <!-- Contenedor de carrera -->
+                            <Grid Grid.Row="1" ColumnDefinitions="Auto,*" Margin="0,5,0,0">
                                 <Label Text="Carrera:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold" />
+                HorizontalOptions="End" FontAttributes="Bold" />
                                 <Picker Grid.Column="1" TextColor="Black" Title="Carreras" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold"
-                                        FontSize="20"/>
-                            </Grid>
-                            <!--Contenedor de Asignatura-->
-                            <Grid Grid.Row="2" ColumnDefinitions="120,310" >
-                                <Label Text="Asignatura:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold"/>
-                                <Picker Grid.Column="1" TextColor="Black" Title="Asignatura" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center"
-                                        TitleColor="Gray" FontAttributes="Bold" FontSize="20"/>
+                HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold" FontSize="20" />
                             </Grid>
 
-                            <!--Contenedor de Contenido a impartir-->
-                            <Grid Grid.Row="3" ColumnDefinitions="110,320">
+                            <!-- Contenedor de Asignatura -->
+                            <Grid Grid.Row="2" ColumnDefinitions="Auto,*" Margin="0,5,0,0">
+                                <Label Text="Asignatura:" TextColor="Black" FontSize="20" VerticalOptions="Center"
+                HorizontalOptions="End" FontAttributes="Bold" />
+                                <Picker Grid.Column="1" TextColor="Black" Title="Asignatura" VerticalOptions="EndAndExpand"
+                HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold" FontSize="20" />
+                            </Grid>
+
+                            <!-- Contenedor de Contenido a impartir -->
+                            <Grid Grid.Row="3" ColumnDefinitions="Auto,*" Margin="0,5,0,0">
                                 <Label Text="Contenido:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   HorizontalOptions="End" FontAttributes="Bold"/>
+                HorizontalOptions="End" FontAttributes="Bold" />
                                 <Picker Grid.Column="1" TextColor="Black" Title="Contenidos" VerticalOptions="EndAndExpand"
-                                    HorizontalTextAlignment="Center"
-                                        TitleColor="gray" FontAttributes="Bold" FontSize="20"/>
+                HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold" FontSize="20" />
                             </Grid>
-                            <!--Contenedor de actividad-->
-                            <Grid Grid.Row="4" ColumnDefinitions="110,330">
+
+                            <!-- Contenedor de actividad -->
+                            <Grid Grid.Row="4" ColumnDefinitions="Auto,*" Margin="0,5,0,0">
                                 <Label Text="Actividad:" TextColor="Black" FontSize="20" VerticalOptions="Center"
-                                   Margin="10,0,0,0" FontAttributes="Bold"/>
+                Margin="10,0,0,0" FontAttributes="Bold" />
                                 <Picker Grid.Column="1" TextColor="Black" Title="Actividad"
-                                    HorizontalTextAlignment="Center"
-                                        TitleColor="Gray" FontAttributes="Bold" FontSize="20"/>
+                HorizontalTextAlignment="Center" TitleColor="Gray" FontAttributes="Bold" FontSize="20" />
                             </Grid>
-                            <!--Boton de agregar los datos del bloque-->
+
+                            <!-- Boton de agregar los datos del bloque -->
                             <Button Grid.Row="5" Text="Agregar Bloque" TextColor="Black" BackgroundColor="Coral" FontSize="20"
-                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="25"
-                                FontAttributes="Bold" Margin="0,0,0,10" BorderColor="Gray" BorderWidth="2"/>
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="25"
+            FontAttributes="Bold" Margin="0,10" BorderColor="Gray" BorderWidth="2" />
                         </Grid>
                     </StackLayout>
-                    <!--Contenedor de datos de salida-->
+
+                    <!-- Contenedor de datos de salida -->
                     <StackLayout Grid.Row="2" BackgroundColor="White">
                         <Grid RowDefinitions="60,200">
-                            <!--Contenedor de Hora de Salida-->
+                            <!-- Contenedor de Hora de Salida -->
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Hora de Salida: " TextColor="Black" HorizontalOptions="EndAndExpand"
-                               VerticalOptions="Center" FontAttributes="Bold" FontSize="25"/>
+                VerticalOptions="Center" FontAttributes="Bold" FontSize="25" />
                                 <TimePicker Grid.Column="1" FontSize="23" TextColor="Red" HorizontalOptions="StartAndExpand"
-                                    VerticalOptions="CenterAndExpand"/>
+                VerticalOptions="CenterAndExpand" />
                             </Grid>
-                            <!--Contenedor de Progreso del tema-->
-                            <!--Contenedor de datos de progreso-->
+                            <!-- Contenedor de Progreso del tema -->
+                            <!-- Contenedor de datos de progreso -->
                             <StackLayout Grid.Row="1" BackgroundColor="Transparent">
                                 <Grid ColumnDefinitions="180,180">
                                     <Label Text="Progreso del tema:" TextColor="Black" FontSize="20"
-                                       VerticalOptions="CenterAndExpand" HorizontalOptions="End" FontAttributes="Bold"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="End" FontAttributes="Bold" />
                                     <Picker Grid.Column="1" Title="Progreso" FontAttributes="Bold" FontSize="20"
-                                            TitleColor="Gray" HorizontalTextAlignment="Center"/>
+                    TitleColor="Gray" HorizontalTextAlignment="Center" />
                                 </Grid>
-                                <!--Contenedor de Observaciones-->
+                                <!-- Contenedor de Observaciones -->
                                 <Grid ColumnDefinitions="160,200">
                                     <Label Text="Observaciones:" TextColor="Black" FontSize="20"
-                                       VerticalOptions="CenterAndExpand" Margin="10,0,0,0" FontAttributes="Bold"/>
+                    VerticalOptions="CenterAndExpand" Margin="10,0,0,0" FontAttributes="Bold" />
                                     <Editor Grid.Column="1" TextColor="Black" FontSize="20"
-                                           Placeholder="Inserte sus Observaciones" PlaceholderColor="Gray"/>
+                    Placeholder="Inserte sus Observaciones" PlaceholderColor="Gray" />
                                 </Grid>
-                                <Button Text="Guardar" TextColor="Black" BackgroundColor="#0C7EF0" FontSize="20" 
-                                 FontAttributes="Bold" BorderColor="Gray" BorderWidth="2" CornerRadius="25" 
-                                        HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"/>
+                                <Button Text="Guardar" TextColor="Black" BackgroundColor="#0C7EF0" FontSize="20"
+                FontAttributes="Bold" BorderColor="Gray" BorderWidth="2" CornerRadius="25"
+                HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" />
                             </StackLayout>
                         </Grid>
                     </StackLayout>
