@@ -8,17 +8,16 @@ using Xamarin.Forms;
 
 namespace UNANMovil.VistaModelo
 {
-    public class VMDetalleAsistencia:BaseViewModel
+    public class VMEditarAsistencia:BaseViewModel
     {
         #region VARIABLES
         string identificacion;
         #endregion
         #region CONSTRUCTOR
-        public VMDetalleAsistencia(INavigation navigation)
+        public VMEditarAsistencia(INavigation navigation)
         {
             Navigation = navigation;
             volvercomamd = new Command(async () => await Volver());
-            editarAsistcommand=new Command(async () => await EditarAsist());
         }
         #endregion
         #region OBJETOS 
@@ -34,14 +33,9 @@ namespace UNANMovil.VistaModelo
         {
             await Navigation.PopAsync();
         }
-        private async Task EditarAsist()
-        {
-            await Navigation.PushAsync(new EditarAsistencia());
-        }
         #endregion
         #region COMANDOS
         public Command volvercomamd { get; }
-        public Command editarAsistcommand { get; }
         #endregion
     }
 }
