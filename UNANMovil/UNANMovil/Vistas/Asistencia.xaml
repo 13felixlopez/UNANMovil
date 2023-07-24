@@ -10,9 +10,9 @@
                 <Grid ColumnDefinitions="80,*,70" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#2F257C">
                     <!-- Espacio para el logo -->
                     <Grid RowDefinitions="*,*,*" Margin="10" ColumnSpacing="0" RowSpacing="0">
-                        <Frame BackgroundColor="Red" CornerRadius="10" />
-                        <Frame Grid.Row="1" BackgroundColor="Yellow" CornerRadius="10" />
-                        <Frame Grid.Row="2" BackgroundColor="Blue" CornerRadius="10" />
+                        <Frame BackgroundColor="Red" />
+                        <Frame Grid.Row="1" BackgroundColor="Yellow" />
+                        <Frame Grid.Row="2" BackgroundColor="Blue" />
                     </Grid>
                     <Image Source="Unan1.png" Aspect="AspectFit" Margin="10" />
                     <!-- Espacio para el título de la app -->

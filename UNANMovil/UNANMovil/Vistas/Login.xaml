@@ -10,7 +10,7 @@
             <!--Contenedor del titulo-->
             <Frame BackgroundColor="#042758" Margin="-5,-25,0,0">
                 <!--Nombre de la Universidad-->
-                <Label Grid.Row="1" Text="UNAN-FAREM Matagalpa" Margin="10" TextColor="White" FontSize="40"
+                <Label Grid.Row="1" Text="UNAN - FAREM Matagalpa" Margin="10" TextColor="White" FontSize="40"
                            HorizontalTextAlignment="Center" FontAttributes="Bold"/>
             </Frame>
             <!--Contenedor del formulario de inicio de sesion-->

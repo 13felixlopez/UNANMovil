@@ -40,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modelo\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Vistas\DetalleAsistencia.xaml.cs">
       <DependentUpon>DetalleAsistencia.xaml</DependentUpon>
     </Compile>
