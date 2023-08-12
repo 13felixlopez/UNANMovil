@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UNANMovil.Conexion;
 using UNANMovil.Modelo;
+using UNANMovil.Vistas;
 using Xamarin.Forms;
 
 namespace UNANMovil.VistaModelo
@@ -65,7 +66,7 @@ namespace UNANMovil.VistaModelo
                     Icono = (byte[])dt.Rows[0][2];
                     correo = dt.Rows[0][5].ToString();
                     Tusuario = dt.Rows[0][6].ToString();
-                    await Navigation.PushAsync(new MainPage());
+                    await Navigation.PushAsync(new Vistas.Menu());
                     nombre = "";
                     pass = "";
                 }

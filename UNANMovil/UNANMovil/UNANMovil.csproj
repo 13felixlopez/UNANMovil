@@ -37,11 +37,17 @@
     <EmbeddedResource Update="Vistas\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\FrmMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Vistas\DetalleAsistencia.xaml.cs">
       <DependentUpon>DetalleAsistencia.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Vistas\FrmMenu.xaml.cs">
+      <DependentUpon>FrmMenu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

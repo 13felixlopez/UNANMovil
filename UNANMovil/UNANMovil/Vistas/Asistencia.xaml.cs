@@ -17,5 +17,10 @@ namespace UNANMovil.Vistas
 			InitializeComponent ();
 			BindingContext = new VMAsistencia(Navigation);
 		}
-	}
+
+        private async void btnCerrar_Clicked(object sender, EventArgs e)
+        {
+			await Navigation.PopAsync();
+        }
+    }
 }
