@@ -23,14 +23,15 @@ namespace UNANMovil.Vistas
             await Navigation.PushAsync(new MainPage());
         }
 
-        private void btnAvance_Clicked(object sender, EventArgs e)
+        private async void btnAvance_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Avance());
         }
 
         private async void btnCerrar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
+
     }
 }

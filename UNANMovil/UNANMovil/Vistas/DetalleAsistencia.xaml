@@ -25,7 +25,7 @@
                     <!--Boton de Volver-->
                     <Frame Grid.Column="2" BackgroundColor="Transparent">
                         <Button Grid.Column="2" BackgroundColor="Transparent"
-                    ImageSource="flecha_left2.png" Command="{Binding volvercomamd}"/>
+                    ImageSource="flecha_left2.png" x:Name="btnCerrar" Clicked="btnCerrar_Clicked"/>
                     </Frame>
                 </Grid>
             <!--Contenedor de detalles-->
@@ -42,7 +42,7 @@
                                FontAttributes="Bold" TextColor="#301C1C"/>
                     <Label Grid.Column="2" Text="Hora de Salida: " TextColor="red" FontSize="20" FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>
-                    <Button Text="00:00" Grid.Column="3" FontSize="34" TextColor="#301C1C" Command="{Binding editarAsistcommand}"
+                    <Button Text="00:00" Grid.Column="3" FontSize="34" TextColor="#301C1C" x:Name="btnHSalida" Clicked="btnHSalida_Clicked"
                                FontAttributes="Bold" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2"/>
                 </Grid>
             </StackLayout>

@@ -23,7 +23,7 @@
                 <!--Boton de Volver-->
                 <Frame Grid.Column="2" BackgroundColor="Transparent">
                     <Button Grid.Column="2" BackgroundColor="Transparent"
-                    ImageSource="flecha_left2.png" Command="{Binding volvercomamd}"/>
+                    ImageSource="flecha_left2.png" x:Name="btnCerrar" Clicked="btnCerrar_Clicked"/>
                 </Frame>
             </Grid>
             <!--Contenedor de detalles-->
@@ -184,7 +184,7 @@
             <StackLayout Grid.Row="3" BackgroundColor="White" Padding="0,10,0,0">
                 <Button Text="Guardar" TextColor="Black" BackgroundColor="#0C7EF0" FontSize="20"
                 FontAttributes="Bold" BorderColor="Gray" BorderWidth="2" CornerRadius="25"
-                HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" Command="{Binding volvercomamd}"/>
+                HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" x:Name="btnGuardar" Clicked="btnCerrar_Clicked"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

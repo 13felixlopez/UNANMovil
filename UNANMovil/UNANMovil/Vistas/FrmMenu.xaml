@@ -7,7 +7,6 @@
         <AbsoluteLayout>
             <!-- Imagen de fondo -->
             <Image Source="Imagen1.jpg" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />
-
             <StackLayout>
                 <!--Estructura de la pantalla-->
             <Grid RowDefinitions="80,*,auto" >
@@ -38,19 +37,24 @@
                             WidthRequest="50" HeightRequest="75"
                             ImageSource="Asistencia.png" FontSize="25"
                             FontAttributes="Bold" BorderWidth="2" BorderColor="Black" 
-                            x:Name="btnAsistencia" Clicked="btnAsistencia_Clicked"></Button>
-                    <Button Grid.Row="1" Text="Avance Programatico" Margin="15,50,15,0"
+                            x:Name="btnAsistencia" Clicked="btnAsistencia_Clicked"
+                            CornerRadius="20"></Button>
+                    <Button Grid.Row="1" Text="Avance Programático" Margin="15,50,15,0"
                             Padding="20" BackgroundColor="Wheat"
-                            WidthRequest="50" HeightRequest="75"
+                            WidthRequest="50" HeightRequest="110"
                             ImageSource="Avance.png" FontSize="25"
                             FontAttributes="Bold" BorderWidth="2" BorderColor="Black"
-                            x:Name="btnAvance" Clicked="btnAvance_Clicked"></Button>
+                            x:Name="btnAvance" Clicked="btnAvance_Clicked"
+                            CornerRadius="20"></Button>
                 </Grid>
-                <Label Grid.Row="2" Text="¡A la libertad por la Univerdidad!"
-                       WidthRequest="100" HeightRequest="100" 
-                       FontAttributes="Bold" FontSize="30" TextColor="Black"
-                       Margin="25, 100,25,100" Padding="0" HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" BackgroundColor="AntiqueWhite"/>
+                    <Frame Grid.Row="2" BackgroundColor="#800000FF" BorderColor="White"
+                            Margin="40, 100">
+                        <Label Text="¡A la libertad por la Univerdidad!"
+                       FontAttributes="Bold" FontSize="30" TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                       TextDecorations="Underline"/>
+                    </Frame>
             </Grid>
         </StackLayout>
         </AbsoluteLayout>

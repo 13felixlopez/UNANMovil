@@ -9,18 +9,18 @@ using Xamarin.Forms.Xaml;
 
 namespace UNANMovil.Vistas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EditarAsistencia : ContentPage
-	{
-		public EditarAsistencia ()
-		{
-			InitializeComponent ();
-			BindingContext = new VMEditarAsistencia(Navigation);
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Avance : ContentPage
+    {
+        public Avance()
+        {
+            InitializeComponent();
+            BindingContext = new VMAvance(Navigation);
+        }
 
         private async void btnCerrar_Clicked(object sender, EventArgs e)
         {
-			await Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
     }
 }
