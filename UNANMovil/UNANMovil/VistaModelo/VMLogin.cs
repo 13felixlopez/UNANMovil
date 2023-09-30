@@ -30,6 +30,7 @@ namespace UNANMovil.VistaModelo
         {
             Navigation = navigation;
             Logincomamd = new Command(async () => await Login());
+            Restablecercomamd = new Command(async () => await Restablacer());
         }
         #endregion
         #region OBJETOS 
@@ -48,45 +49,51 @@ namespace UNANMovil.VistaModelo
         #region PROCESOS
         private async Task Login()
         {
-            MProfes mProfes = new MProfes();
-            Nprofes nprofes = new Nprofes();
+        //    MProfes mProfes = new MProfes();
+        //    Nprofes nprofes = new Nprofes();
 
-            DataTable dt = new DataTable();
-            mProfes.Usuario = nombre;
-            mProfes.Password = Encrip.Encriptar(Encrip.Encriptar(pass));
+        //    DataTable dt = new DataTable();
+        //    mProfes.Usuario = nombre;
+        //    mProfes.Password = Encrip.Encriptar(Encrip.Encriptar(pass));
 
-            try
-            {
-                dt = nprofes.Nprofe(mProfes);
+        //    try
+        //    {
+        //        dt = nprofes.Nprofe(mProfes);
 
-                if (dt.Rows.Count > 0)
-                {
-                    idprofesor = Convert.ToInt32(dt.Rows[0][0]);
-                    nombreprofe = dt.Rows[0][1].ToString();
-                    Icono = (byte[])dt.Rows[0][2];
-                    correo = dt.Rows[0][5].ToString();
-                    Tusuario = dt.Rows[0][6].ToString();
+        //        if (dt.Rows.Count > 0)
+        //        {
+        //            idprofesor = Convert.ToInt32(dt.Rows[0][0]);
+        //            nombreprofe = dt.Rows[0][1].ToString();
+        //            Icono = (byte[])dt.Rows[0][2];
+        //            correo = dt.Rows[0][5].ToString();
+        //            Tusuario = dt.Rows[0][6].ToString();
                     await Navigation.PushAsync(new Vistas.Menu());
-                    nombre = "";
-                    pass = "";
-                }
-                else
-                {
-                    await DisplayAlert("Error", "Usuario o Contraseña incorrectos", "OK");
-                }
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", ex.Message, "OK");
-            }
-            finally
-            {
-                Conexion.Conexion.Cerrar();
-            }
+            //        nombre = "";
+            //        pass = "";
+            //    }
+            //    else
+            //    {
+            //        await DisplayAlert("Error", "Usuario o Contraseña incorrectos", "OK");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    await DisplayAlert("Error", ex.Message, "OK");
+            //}
+            //finally
+            //{
+            //    Conexion.Conexion.Cerrar();
+            //}
+        }
+
+        private async Task Restablacer()
+        {
+            await Navigation.PushAsync(new Vistas.Restablecer());
         }
         #endregion
         #region COMANDOS
         public Command Logincomamd { get; }
+        public Command Restablecercomamd { get; }
         #endregion
     }
 }

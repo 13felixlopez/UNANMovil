@@ -25,7 +25,7 @@
                         <Image Source="User.png" HorizontalOptions="EndAndExpand" 
                                VerticalOptions="CenterAndExpand"/>
                         <!--Entrada de para user-->
-                        <Entry Grid.Column="1" Placeholder="Nombre de Usuario" FontAttributes="Bold" 
+                        <Entry Grid.Column="1" Placeholder="INSS" FontAttributes="Bold" 
                                FontSize="20" VerticalOptions="Center"
                                HorizontalTextAlignment="Start" Margin="20,0,0,0" Text="{Binding Nombre}" 
                                PlaceholderColor="Gray" x:Name="txtUser" TextColor="Black"/>
@@ -48,17 +48,26 @@
             <Frame Grid.Row="2" Margin="0,0,0,120">
                 <Button Grid.Row="2" Text="Iniciar Sesion" BackgroundColor="#1976D2" TextColor="White" FontSize="20"
                     FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="StartAndExpand"
-                   CornerRadius="25" Margin="0,40,0,0" Padding="30,0,30,0" Command="{Binding Logincomamd}"/>
-            </Frame>
+                   CornerRadius="25" Margin="0,40,0,0" Padding="30,0,30,0" Command="{Binding Logincomamd}"/>                
+            </Frame>            
             <!--Apartado de Lema-->
             <Frame Grid.Row="3" Margin="0,-130,0,0">
                 <Grid RowDefinitions="*,*">
                     <!--Lema-->
-                    <Label Text="¡A la libertad por la Universidad!" TextColor="Black" FontSize="20" VerticalTextAlignment="Start"
-                           HorizontalTextAlignment="Center"/>
-                    <Frame Grid.Row="2" BackgroundColor="#042758" Margin="-20"></Frame>
+                    <Button Text="Restablecer Contraseña"
+                            Margin="0,-20,0,20"
+                            BackgroundColor="Transparent"
+                            TextColor="Blue"
+                            FontAttributes="Bold"
+                            x:Name="BtnRestablecer"
+                            Command="{Binding Restablecercomamd}"></Button>
+                    <Frame Grid.Row="2" BackgroundColor="#042758" Margin="-22">
+                    <Label Text="¡A la libertad por la Universidad!" TextColor="White" FontSize="25" VerticalTextAlignment="Start"
+                           HorizontalTextAlignment="Center" />
+                    </Frame>
                 </Grid>
             </Frame>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

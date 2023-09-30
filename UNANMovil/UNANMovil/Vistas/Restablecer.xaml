@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UNANMovil.Vistas.Restablecer"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,auto,*">
+            <Grid RowDefinitions="80,55,*">
+                <!-- Espacio para el título de la página -->
+                <Grid ColumnDefinitions="80,*,70"
+                      ColumnSpacing="0"
+                      RowSpacing="0"
+                      BackgroundColor="#2F257C">
+                    <!-- Espacio para el logo -->
+                    <Grid RowDefinitions="*,*,*"
+                          Margin="10"
+                          ColumnSpacing="0"
+                          RowSpacing="0">
+                        <Frame BackgroundColor="Red" />
+                        <Frame Grid.Row="1"
+                               BackgroundColor="Yellow" />
+                        <Frame Grid.Row="2"
+                               BackgroundColor="Blue" />
+                    </Grid>
+                    <Image Source="Unan1.png"
+                           Aspect="AspectFit"
+                           Margin="10" />
+                    <!-- Espacio para el título de la app -->
+                    <Frame Grid.Column="1"
+                           BackgroundColor="Transparent">
+                        <Label Text="Restablecer Contraseña"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               TextColor="WhiteSmoke" />
+                    </Frame>
+                    <!-- Boton de Volver -->
+                    <Frame Grid.Column="2"
+                           HasShadow="False"
+                           BackgroundColor="Transparent">
+                        <Button Grid.Column="2"
+                                BackgroundColor="Transparent"
+                                ImageSource="flecha_left2.png"
+                                x:Name="btnCerrar"
+                                Clicked="btnCerrar_Clicked"/>
+                    </Frame>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

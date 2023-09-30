@@ -17,5 +17,6 @@ namespace UNANMovil.Vistas
 			InitializeComponent ();
 			BindingContext = new VMLogin(Navigation);
 		}
-	}
+
+    }
 }
