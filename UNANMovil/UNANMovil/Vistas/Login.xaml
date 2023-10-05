@@ -27,7 +27,7 @@
                         <!--Entrada de para user-->
                         <Entry Grid.Column="1" Placeholder="INSS" FontAttributes="Bold" 
                                FontSize="20" VerticalOptions="Center"
-                               HorizontalTextAlignment="Start" Margin="20,0,0,0" Text="{Binding Nombre}" 
+                               HorizontalTextAlignment="Start" Margin="20,0,0,0" Text="{Binding INSS}" 
                                PlaceholderColor="Gray" x:Name="txtUser" TextColor="Black"/>
                     </Grid>
                     <!--Insertar contraseña-->

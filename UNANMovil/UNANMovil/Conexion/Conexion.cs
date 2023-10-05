@@ -8,7 +8,7 @@ namespace UNANMovil.Conexion
 {
     public class Conexion
     {
-        public static string conexion = ("Data Source= 192.168.4.84; Initial Catalog=UNAN; Integrated Security=False;User=FelixL;Password=13Fermin");
+        public static string conexion = ("Data Source = 172.16.140.104; Initial Catalog=UNAN1; Integrated Security=False;User=Dixon;Password=1311");
         public static SqlConnection conectar=new SqlConnection(conexion);
 
         public static void Abrir()

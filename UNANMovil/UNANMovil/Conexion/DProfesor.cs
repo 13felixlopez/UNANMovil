@@ -16,10 +16,12 @@ namespace UNANMovil.Conexion
         {
             try
             {
-                Conexion.Abrir();
-                SqlCommand cmd = new SqlCommand("Login", Conexion.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Usuario", parametros.Usuario);
+                Conexion.Cerrar();
+                SqlCommand cmd = new SqlCommand("Login", Conexion.conectar)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@INSS", parametros.INSS);
                 cmd.Parameters.AddWithValue("@Password", parametros.Password);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -36,25 +38,6 @@ namespace UNANMovil.Conexion
             }
         }
 
-        public void ObtenerIdProfesor(ref int Idprofesor, string Usuario)
-        {
-            try
-            {
-                Conexion.Abrir();
-                SqlCommand cmd = new SqlCommand("ObtenerIdProfesor", Conexion.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Usuario", Usuario);
-                Idprofesor = Convert.ToInt32(cmd.ExecuteScalar());
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                Conexion.Cerrar();
-            }
-        }
         #endregion
     }
 }
